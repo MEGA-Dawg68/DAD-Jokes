@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dad Joke Extension</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            background-color: #3498db;
+            color: white;
+            padding: 20px 0;
+        }
+        h2 {
+            margin-top: 20px;
+        }
+        div {
+            margin: 20px;
+            padding: 10px;
+            background-color: white;
+            border-radius: 5px;
+            width: 400px;
+            margin: 0 auto;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        p {
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dad Joke Extension</h1>
+    <div>
+        <button id="getJoke">Get Joke</button>
+        <button id="saveJoke">Save Joke</button>
+        <button id="viewSavedJokes">View Saved Jokes</button>
+    </div>
+    <div>
+        <h2>Random Dad Joke</h2>
+        <p id="joke"></p>
+        <button id="copyInstantJoke">Copy Instant Joke</button>
+    </div>
+    <div id="savedJokesContainer" style="display: none;">
+        <h2>Saved Jokes</h2>
+        <div id="savedJokes"></div>
+    </div>
+    <button id="shareButton">
+        <img src="share.png" alt="Share Icon" width="32" height="32">
+    </button>
+    <script src="popup.js"></script>
+</body>
+</html>
