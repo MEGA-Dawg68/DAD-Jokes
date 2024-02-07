@@ -7,6 +7,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const savedJokesContainer = document.getElementById("savedJokesContainer");
     const copyInstantJokeButton = document.getElementById("copyInstantJoke");
     const shareButton = document.getElementById("shareButton");
+    document.getElementById('yourButtonId').addEventListener('click', function() {
+        chrome.tabs.create({ url: 'page.html' });
+    });
 
     getJokeButton.addEventListener("click", getDadJoke);
     saveJokeButton.addEventListener("click", saveJoke);
@@ -59,11 +62,11 @@ document.addEventListener("DOMContentLoaded", function() {
         copyTextToClipboard(jokeText);
     }
 
-    // Function to share the joke (You need to implement this)
+    
     function shareJoke() {
         const jokeText = jokeElement.textContent;
-        // Implement the sharing logic here, e.g., sharing on social media or copying to the clipboard
-        // You can use the copyTextToClipboard function as an example for copying the text.
+        
+        
     }
 
     function displaySavedJokes(savedJokes) {
